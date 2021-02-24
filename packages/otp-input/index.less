@@ -1,0 +1,62 @@
+@error-color: #f5222d;
+@input-height-base: 32px;
+@input-height-lg: 40px;
+@input-height-sm: 24px;
+
+.ant-form-item-control {
+  position: relative;
+
+  .input-content {
+    display: flex;
+    align-items: center;
+    margin: 0 -3px 6px;
+
+    input {
+      color: inherit;
+      font-family: inherit;
+      border: 0;
+      outline: 0;
+      border-bottom: 2px solid #e6ebec;
+      background-color: #fff;
+      margin: 0 3px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &.small {
+        width: @input-height-sm;
+        height: @input-height-sm;
+      }
+
+      &.default {
+        width: @input-height-base;
+        height: @input-height-base;
+      }
+      &.large {
+        width: @input-height-lg;
+        height: @input-height-lg;
+      }
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &.has-error .input-content input {
+    border-color: @error-color;
+  }
+}
+.show-help-enter-active,
+.show-help-leave-active {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.show-help-enter-from,
+.show-help-leave-to {
+  opacity: 0;
+  transform: translateY(-5px);
+}

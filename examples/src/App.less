@@ -1,0 +1,95 @@
+.vuedoc {
+  color: rgba(0, 0, 0, 0.85);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  > h2 {
+    margin: 55px 0 20px;
+  }
+
+  > p {
+    font-size: 14px;
+    margin: 14px 0;
+  }
+
+  table {
+    width: 100%;
+    tr {
+      &:first-child {
+        th {
+          border-top: 1px solid #eaeefb;
+        }
+      }
+      th,
+      td {
+        border-right: 1px solid #eaeefb;
+        border-bottom: 1px solid #eaeefb;
+        background-color: #fff;
+        padding: 10px;
+        &:first-child {
+          border-left: 1px solid #eaeefb;
+        }
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      th {
+        background-color: #fafafa;
+        font-weight: 500;
+      }
+
+      &:hover td {
+        background-color: #e6f7ff;
+      }
+    }
+  }
+
+  > table {
+    p {
+      color: rgba(0, 0, 0, 0.65);
+      margin: 0;
+    }
+
+    span {
+      color: #c41d7f;
+    }
+
+    code {
+      background-color: rgba(0, 0, 0, 0.05);
+      margin: 0 4px;
+      display: inline-block;
+      padding: 1px 5px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+  }
+
+  li {
+    font-weight: bold;
+  }
+
+  p > code,
+  li > code {
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0 4px;
+    display: inline-block;
+    padding: 1px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+
+  .vuedoc-demo {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,95 @@
+.breakpoints-space(@prefix, @properties, @value) {
+  .@{prefix}@{value} {
+    each(@properties, .(@propertie){
+      @{propertie}: if(isnumber(@value), @value * @duration, @value);
+    });
+  }
+  each(@breakpoints, .(@v, @k, @i){
+    .@{prefix}@{k}-@{value} {
+      @media (min-width: @v) {
+        each(@properties, .(@propertie){
+          @{propertie}: if(isnumber(@value), @value * @duration, @value) !important;
+        })
+      }
+    }
+  });
+}
+
+@spaces: {
+  @margin-top: {
+    @key: margin-top;
+    @values: @space-numbers;
+    @prefix: mt-;
+  };
+  @margin-bottom: {
+    @key: margin-bottom;
+    @values: @space-numbers;
+    @prefix: mb-;
+  };
+  @margin-left: {
+    @key: margin-left;
+    @values: @space-numbers;
+    @prefix: ml-;
+  };
+  @margin-right: {
+    @key: margin-right;
+    @values: @space-numbers;
+    @prefix: mr-;
+  };
+  @margin-x: {
+    @key: margin-left, margin-right;
+    @values: @space-numbers;
+    @prefix: mx-;
+  };
+  @margin-y: {
+    @key: margin-top, margin-bottom;
+    @values: @space-numbers;
+    @prefix: my-;
+  };
+  @margin: {
+    @key: margin-top, margin-bottom, margin-left, margin-right;
+    @values: @space-numbers;
+    @prefix: m-;
+  };
+  @padding-top: {
+    @key: padding-top;
+    @values: @space-numbers;
+    @prefix: pt-;
+  };
+  @padding-bottom: {
+    @key: padding-bottom;
+    @values: @space-numbers;
+    @prefix: pb-;
+  };
+  @padding-left: {
+    @key: padding-left;
+    @values: @space-numbers;
+    @prefix: pl-;
+  };
+  @padding-right: {
+    @key: padding-right;
+    @values: @space-numbers;
+    @prefix: pr-;
+  };
+  @padding-x: {
+    @key: padding-left, padding-right;
+    @values: @space-numbers;
+    @prefix: px-;
+  };
+  @padding-y: {
+    @key: padding-top, padding-bottom;
+    @values: @space-numbers;
+    @prefix: py-;
+  };
+  @padding: {
+    @key: padding-top, padding-bottom, padding-left, padding-right;
+    @values: @space-numbers;
+    @prefix: p-;
+  };
+};
+
+each(@spaces, {
+  each(@value[@values], .(@v, @k, @i){
+    .breakpoints-space(@value[@prefix], @value[@key], @v);
+  });
+});

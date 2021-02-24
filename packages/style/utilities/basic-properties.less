@@ -1,0 +1,101 @@
+.breakpoints-properties(@prefix, @properties, @value) {
+  .@{prefix}@{value} {
+    @{properties}: @value;
+  }
+  each(@breakpoints, .(@v, @k, @i){
+    .@{prefix}@{k}-@{value} {
+      @media (min-width: @v) {
+        @{properties}: @value !important;
+      }
+    }
+  });
+};
+
+@properties: {
+  @display: {
+    @key: display;
+    @values: block, inline, inline-block, none, flex, inline-flex, table, table-cell, table-row;
+    @prefix: d-;
+  };
+  @flex-direction: {
+    @key: flex-direction;
+    @values: row, row-reverse, column, column-reverse;
+    @prefix: direction-;
+  };
+  @flex-wrap: {
+    @key: flex-wrap;
+    @values: nowrap, wrap, wrap-reverse;
+    @prefix: wrap-;
+  };
+  @justify-content: {
+    @key: justify-content;
+    @values: flex-start, flex-end, center, space-between, space-around;
+    @prefix: justify-;
+  };
+  @align-items: {
+    @key: align-items;
+    @values: flex-start, flex-end, center, baseline, stretch;
+    @prefix: align-;
+  };
+  @order: {
+    @key: order;
+    @values: @numbers;
+    @prefix: order-;
+  };
+  @flex-grow: {
+    @key: flex-grow;
+    @values: 0, 1;
+    @prefix: grow-;
+  };
+  @flex-shrink: {
+    @key: flex-shrink;
+    @values: 0, 1;
+    @prefix: shrink-;
+  };
+  @flex: {
+    @key: flex;
+    @values: auto, 1, none;
+    @prefix: flex-;
+  };
+  @align-self: {
+    @key: align-self;
+    @values: flex-start, flex-end, center, baseline, stretch;
+    @prefix: align-self-;
+  };
+  @float: {
+    @key: float;
+    @values: left, right, none;
+    @prefix: float-;
+  };
+  @text-align: {
+    @key: text-align;
+    @values: left, center, right;
+    @prefix: text-;
+  };
+  @font-weight: {
+    @key: font-weight;
+    @values: 400, 500, 700, 900;
+    @prefix: font-;
+  };
+  @font-style: {
+    @key: font-style;
+    @values: normal, italic, oblique;
+    @prefix: font-;
+  };
+  @text-decoration: {
+    @key: text-decoration;
+    @values: none, overline, underline, line-through;
+    @prefix: text-decoration-;
+  };
+  @text-transform: {
+    @key: text-transform;
+    @values: uppercase, lowercase, capitalize;
+    @prefix: text-;
+  };
+};
+
+each(@properties, {
+  each(@value[@values], .(@v, @k, @i){
+    .breakpoints-properties(@value[@prefix], @value[@key], @v);
+  });
+});

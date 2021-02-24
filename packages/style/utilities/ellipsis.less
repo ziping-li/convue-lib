@@ -1,0 +1,35 @@
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+each(@breakpoints, .(@v, @k, @i){
+  .ellipsis-@{k} {
+    @media (min-width: @v) {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+});
+
+each(@numbers,{
+  .ellipsis-@{value} {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @value;
+  }
+
+  each(@breakpoints, .(@v, @k, @i){
+    .ellipsis-@{k}-@{value} {
+      @media (min-width: @v) {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: @value;
+      }
+    }
+  });
+});
