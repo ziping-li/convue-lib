@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/container",
   "license": "MIT",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/container.umd.js",
   "files": [
     "dist"
@@ -13,8 +13,11 @@
       "require": "./dist/container.umd.js"
     }
   },
-  "dependencies": {
-    "@convue-lib/utils": "^0.1.4"
+  "publicConfig": {
+    "access": "public"
   },
-  "gitHead": "5b7992865271f663c237a9475eef304b96683dd6"
+  "dependencies": {
+    "@convue-lib/utils": "^0.1.5"
+  },
+  "gitHead": "673b66ed9663f5e47fdf28eb70364f7458aaac32"
 }
