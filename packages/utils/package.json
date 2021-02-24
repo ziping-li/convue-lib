@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/utils",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/utils.umd.js",
   "files": [
     "dist"
@@ -28,5 +28,6 @@
     "@types/lodash.debounce": "^4.0.6",
     "@types/lodash.throttle": "^4.1.6",
     "@types/numeral": "^2.0.0"
-  }
+  },
+  "gitHead": "348369991de77e2d4de489f73527104efe6f21be"
 }

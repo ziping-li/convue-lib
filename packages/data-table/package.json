@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/data-table",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/data-table.umd.js",
   "files": [
     "dist"
@@ -14,7 +14,8 @@
     }
   },
   "dependencies": {
-    "@convue-lib/data-view": "^0.1.1",
-    "@convue-lib/utils": "^0.1.1"
-  }
+    "@convue-lib/data-view": "^0.1.2",
+    "@convue-lib/utils": "^0.1.2"
+  },
+  "gitHead": "348369991de77e2d4de489f73527104efe6f21be"
 }
