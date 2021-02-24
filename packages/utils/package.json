@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/utils",
   "license": "MIT",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/utils.umd.js",
   "files": [
     "dist"
@@ -13,7 +13,7 @@
       "require": "./dist/utils.umd.js"
     }
   },
-  "publicConfig": {
+  "publishConfig": {
     "access": "public"
   },
   "dependencies": {
@@ -32,5 +32,5 @@
     "@types/lodash.throttle": "^4.1.6",
     "@types/numeral": "^2.0.0"
   },
-  "gitHead": "673b66ed9663f5e47fdf28eb70364f7458aaac32"
+  "gitHead": "d089bb07123483c5bed38c8ff54c85ac1a246143"
 }

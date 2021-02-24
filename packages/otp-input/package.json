@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/otp-input",
   "license": "MIT",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/otp-input.umd.js",
   "files": [
     "dist"
@@ -13,8 +13,8 @@
       "require": "./dist/otp-input.umd.js"
     }
   },
-  "publicConfig": {
+  "publishConfig": {
     "access": "public"
   },
-  "gitHead": "673b66ed9663f5e47fdf28eb70364f7458aaac32"
+  "gitHead": "d089bb07123483c5bed38c8ff54c85ac1a246143"
 }
