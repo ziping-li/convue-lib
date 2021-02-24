@@ -1,0 +1,19 @@
+{
+  "name": "@convue-lib/container",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/container.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/container.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/container.es.js",
+      "require": "./dist/container.umd.js"
+    }
+  },
+  "dependencies": {
+    "@convue-lib/utils": "^0.1.0"
+  }
+}

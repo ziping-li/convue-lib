@@ -1,0 +1,19 @@
+{
+  "name": "@convue-lib/phone",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/phone.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/phone.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/phone.es.js",
+      "require": "./dist/phone.umd.js"
+    }
+  },
+  "dependencies": {
+    "@convue-lib/utils": "^0.1.0"
+  }
+}

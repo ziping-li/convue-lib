@@ -1,0 +1,19 @@
+{
+  "name": "@convue-lib/otp-send",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/otp-send.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/otp-send.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/otp-send.es.js",
+      "require": "./dist/otp-send.umd.js"
+    }
+  },
+  "dependencies": {
+    "@convue-lib/utils": "^0.1.0"
+  }
+}

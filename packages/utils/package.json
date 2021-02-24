@@ -1,0 +1,32 @@
+{
+  "name": "@convue-lib/utils",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/utils.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/utils.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/utils.es.js",
+      "require": "./dist/utils.umd.js"
+    }
+  },
+  "dependencies": {
+    "awesome-phonenumber": "^2.45.0",
+    "dayjs": "^1.10.4",
+    "enquire.js": "^2.1.6",
+    "is-mergeable-object": "^1.1.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "numeral": "^2.0.6",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "@types/enquire.js": "^2.1.2",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.throttle": "^4.1.6",
+    "@types/numeral": "^2.0.0"
+  }
+}

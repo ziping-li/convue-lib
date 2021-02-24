@@ -1,0 +1,16 @@
+{
+  "name": "@convue-lib/otp-input",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/otp-input.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/otp-input.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/otp-input.es.js",
+      "require": "./dist/otp-input.umd.js"
+    }
+  }
+}

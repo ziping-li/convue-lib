@@ -1,0 +1,16 @@
+{
+  "name": "@convue-lib/styles",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/style.css",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/style.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/style.es.js",
+      "require": "./dist/style.umd.js"
+    }
+  }
+}

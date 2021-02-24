@@ -1,0 +1,19 @@
+{
+  "name": "@convue-lib/data-view",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/data-view.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/data-view.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/data-view.es.js",
+      "require": "./dist/data-view.umd.js"
+    }
+  },
+  "dependencies": {
+    "@convue-lib/utils": "^0.1.0"
+  }
+}

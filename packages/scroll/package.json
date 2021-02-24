@@ -1,0 +1,19 @@
+{
+  "name": "@convue-lib/scroll",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/scroll.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/scroll.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/scroll.es.js",
+      "require": "./dist/scroll.umd.js"
+    }
+  },
+  "dependencies": {
+    "@convue-lib/utils": "^0.1.0"
+  }
+}

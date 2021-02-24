@@ -1,0 +1,20 @@
+{
+  "name": "@convue-lib/data-table",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/data-table.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/data-table.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/data-table.es.js",
+      "require": "./dist/data-table.umd.js"
+    }
+  },
+  "dependencies": {
+    "@convue-lib/data-view": "^0.1.0",
+    "@convue-lib/utils": "^0.1.0"
+  }
+}

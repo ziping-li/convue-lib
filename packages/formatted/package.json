@@ -1,0 +1,19 @@
+{
+  "name": "@convue-lib/formatted",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "dist/formatted.umd.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/formatted.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/formatted.es.js",
+      "require": "./dist/formatted.umd.js"
+    }
+  },
+  "dependencies": {
+    "cleave.js": "^1.6.0"
+  }
+}
