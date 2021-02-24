@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/enhance-alert",
   "license": "MIT",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "dist/enhance-alert.umd.js",
   "files": [
     "dist"
