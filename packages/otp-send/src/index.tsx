@@ -1,6 +1,9 @@
 import { defineComponent, ref, PropType, onMounted } from 'vue';
 import { dayjs } from '@convue-lib/utils';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 export default defineComponent({
   name: 'OtpSend',

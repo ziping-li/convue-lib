@@ -1,6 +1,9 @@
 import { defineComponent, getCurrentInstance, onMounted, reactive, onBeforeUnmount } from 'vue';
 import Cleave from 'cleave.js';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 export default defineComponent({
   name: 'Formatted',

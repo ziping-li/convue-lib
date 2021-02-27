@@ -1,5 +1,8 @@
 import { defineComponent, Transition, PropType } from 'vue';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 type OTPInputSize = 'small' | 'default' | 'large';
 

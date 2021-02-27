@@ -1,7 +1,10 @@
 import { defineComponent, computed, ComputedRef, ref, PropType } from 'vue';
 import { BAR_MAP } from './types';
 import { BarMap, BarMapItem, BarDirection, BarTrigger } from './types';
-import './bar.less';
+import styleInject from 'style-inject';
+import css from './bar.less';
+
+styleInject(css);
 
 export default defineComponent({
   name: 'bar',

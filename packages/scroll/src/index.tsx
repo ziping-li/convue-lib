@@ -3,7 +3,10 @@ import { defineComponent, onMounted, onUnmounted, PropType, reactive, ref } from
 import { addResizeListener, removeResizeListener } from './resize-event';
 import Bar from './bar';
 import { BarDirection, BarTrigger } from './types';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 export default defineComponent({
   name: 'Scroll',

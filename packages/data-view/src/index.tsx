@@ -1,7 +1,10 @@
 import { defineComponent, PropType, reactive, ref, toRaw } from 'vue';
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons-vue';
 import { queryMedia } from '@convue-lib/utils';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 export default defineComponent({
   name: 'DataView',
@@ -115,7 +118,7 @@ export default defineComponent({
           v-show={sortFields.length > 0}
           class="mb-3"
           mode="tags"
-          placeholder="排序"
+          placeholder="Sort By"
           v-model={[selectedItems.value, 'value']}
           style={{ width: '100%' }}
           v-slots={{

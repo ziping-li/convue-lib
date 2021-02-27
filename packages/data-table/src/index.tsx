@@ -1,7 +1,10 @@
 import { defineComponent, ref } from 'vue';
 import { queryMedia } from '@convue-lib/utils';
 import DataView from '@convue-lib/data-view';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 export default defineComponent({
   name: 'DataTable',

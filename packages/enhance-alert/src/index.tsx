@@ -7,7 +7,10 @@ import {
   render,
   PropType,
 } from 'vue';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 type EnhanceAlertPosition = 'bottom' | 'right';
 
