@@ -3,7 +3,7 @@ import { dayjs } from '@convue-lib/utils';
 import './index.less';
 
 export default defineComponent({
-  name: 'otp-send',
+  name: 'OtpSend',
   inheritAttrs: false,
   props: {
     initialText: {

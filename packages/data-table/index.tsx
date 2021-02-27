@@ -4,7 +4,7 @@ import DataView from '@convue-lib/data-view';
 import './index.less';
 
 export default defineComponent({
-  name: 'data-table',
+  name: 'DataTable',
   inheritAttrs: false,
   setup(_props, { attrs, slots }) {
     const media = ref('');

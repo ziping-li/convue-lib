@@ -96,15 +96,15 @@ export default defineComponent({
           </router-link>
         </a-layout-header>
         <a-layout>
-          <a-layout-sider class="d-xs-none d-sm-none" width="240" theme="light">
+          <a-layout-sider class="d-none d-md-block" width="240" theme="light">
             <Menu title={this.title} />
           </a-layout-sider>
           <a-layout>
-            <a-layout-content class="layout-content px-xs-3 px-sm-3">
+            <a-layout-content class="layout-content">
               <router-view></router-view>
             </a-layout-content>
 
-            <a-anchor class="d-xs-none d-sm-none layout-anchor" offsetTop={30} onClick={this.onClick}>
+            <a-anchor class="d-none d-md-block layout-anchor" offsetTop={30} onClick={this.onClick}>
               {this.anchor.map((item: any) => {
                 return <a-anchor-link href={'#' + item.anchor} title={item.content} />;
               })}

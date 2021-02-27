@@ -28,9 +28,11 @@
     "url": "https://github.com/ziping-li/convue-lib.git"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "dev": "vite --config ./build/doc.js",
     "build:docs": "vite build --config ./build/doc.js",
     "build": "node ./build/lib.js",
+    "publish": "lerna publish --force-publish",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "lint": "eslint --ext .js,.tsx src/",
     "lint:fix": "yarn run lint --fix"
@@ -105,5 +107,11 @@
     "vue-router": "4",
     "webpack": "^5.16.0",
     "webpack-cli": "^4.4.0"
+  },
+  "dependencies": {
+    "postcss-import": "^14.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "style-inject": "^0.3.0"
   }
 }

@@ -4,7 +4,7 @@ import { queryMedia } from '@convue-lib/utils';
 import './index.less';
 
 export default defineComponent({
-  name: 'data-view',
+  name: 'DataView',
   inheritAttrs: false,
   props: {
     columns: {
@@ -141,7 +141,7 @@ export default defineComponent({
         </a-select>
         <a-card
           v-show={slots.title}
-          class="a-data-view"
+          class="convue-data-view"
           bordered={false}
           bodyStyle={{ padding: '15px' }}
         >
@@ -150,7 +150,7 @@ export default defineComponent({
         {dataSource.map((item) => {
           return (
             <a-card
-              class={['a-data-view', media.value]}
+              class={['convue-data-view', media.value]}
               bordered={false}
               bodyStyle={{ padding: '15px' }}
             >
@@ -177,7 +177,7 @@ export default defineComponent({
 
         <a-card
           v-show={slots.footer}
-          class="a-data-view"
+          class="convue-data-view"
           bordered={false}
           bodyStyle={{ padding: '15px' }}
         >

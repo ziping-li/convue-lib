@@ -4,7 +4,7 @@ import './index.less';
 type OTPInputSize = 'small' | 'default' | 'large';
 
 export default defineComponent({
-  name: 'otp-input',
+  name: 'OtpInput',
   props: {
     modelValue: {
       type: String,

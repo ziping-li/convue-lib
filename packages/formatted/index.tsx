@@ -3,7 +3,7 @@ import Cleave from 'cleave.js';
 import './index.less';
 
 export default defineComponent({
-  name: 'formatted',
+  name: 'Formatted',
   inheritAttrs: false,
   props: {
     modelValue: String,

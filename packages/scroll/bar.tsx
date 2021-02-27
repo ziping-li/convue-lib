@@ -113,13 +113,13 @@ export default defineComponent({
 
     return () => (
       <div
-        class={`a-scrollbar-bar a-scrollbar-${props.direction}`}
+        class={`convue-scrollbar-bar convue-scrollbar-${props.direction}`}
         onMousedown={handleBarMouseDown}
         style={props.barStyle}
         ref={barRef}
       >
         <div
-          class="a-scrollbar-thumb"
+          class="convue-scrollbar-thumb"
           ref={thumbRef}
           onMousedown={handleThumbMouseDown}
           style={thumbStyleObj.value}

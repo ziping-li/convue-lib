@@ -6,7 +6,7 @@ import { BarDirection, BarTrigger } from './types';
 import './index.less';
 
 export default defineComponent({
-  name: 'scroll',
+  name: 'Scroll',
   props: {
     width: {
       type: String,
@@ -89,15 +89,15 @@ export default defineComponent({
 
     return () => (
       <div
-        class={`a-scrollbar a-scrollbar-${props.trigger}`}
+        class={`convue-scrollbar convue-scrollbar-${props.trigger}`}
         style={{ width: props.width, height: props.height }}
       >
         <div
-          class={{ 'a-scrollbar-wrap': true, [`a-scrollbar-wrap-${props.direction}`]: true }}
+          class={{ 'convue-scrollbar-wrap': true, [`convue-scrollbar-wrap-${props.direction}`]: true }}
           ref={wrapRef}
           onScroll={handleScroll}
         >
-          <div class="a-scrollbar-content">
+          <div class="convue-scrollbar-content">
             {slots.default?.()}
           </div>
           {props.direction !== 'x' && (
@@ -109,7 +109,7 @@ export default defineComponent({
               barStyle={props.barStyle}
               thumbStyle={props.thumbStyle}
               v-show={hasVBar}
-              class="a-scrollbar-bar-v-bar"
+              class="convue-scrollbar-bar-v-bar"
             ></Bar>
           )}
           {props.direction !== 'y' && (
@@ -121,7 +121,7 @@ export default defineComponent({
               barStyle={props.barStyle}
               thumbStyle={props.thumbStyle}
               v-show={hasHBar}
-              class="a-scrollbar-bar-h-bar"
+              class="convue-scrollbar-bar-h-bar"
             ></Bar>
           )}
         </div>

@@ -3,7 +3,7 @@ import { getSupportedCallingCodes, getPhoneNumber } from '@convue-lib/utils';
 import './index.less';
 
 export default defineComponent({
-  name: 'phone',
+  name: 'Phone',
   inheritAttrs: false,
   props: {
     separator: {
@@ -46,7 +46,7 @@ export default defineComponent({
     return () => (
       <a-input
         {...bindValues}
-        class="a-phone"
+        class="convue-phone"
         v-model={[state.phone, 'value']}
         v-slots={{
           addonBefore: () => {

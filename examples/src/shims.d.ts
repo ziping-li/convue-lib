@@ -1,11 +1,11 @@
 declare module '*.vue' {
-  import type { DefineComponent } from '../../packages/node_modules/vue';
+  import type { DefineComponent } from 'vue';
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
 
 declare module '*.md' {
-  import { DefineComponent } from '../../packages/node_modules/vue';
+  import { DefineComponent } from 'vue';
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }

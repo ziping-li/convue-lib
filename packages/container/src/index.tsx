@@ -1,9 +1,12 @@
 import { computed, defineComponent, ref } from 'vue';
 import { queryMedia } from '@convue-lib/utils';
-import './index.less';
+import styleInject from 'style-inject';
+import css from './index.less';
+
+styleInject(css);
 
 export default defineComponent({
-  name: 'container',
+  name: 'Container',
   props: {
     fuild: {
       type: Boolean,
@@ -14,7 +17,7 @@ export default defineComponent({
     const media = ref('');
     queryMedia((data: string) => (media.value = data));
     const className = computed(() => ({
-      'avw-container': true,
+      'convue-container': true,
       fuild: props.fuild,
       [media.value]: true,
     }));

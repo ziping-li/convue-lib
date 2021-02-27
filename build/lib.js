@@ -1,23 +1,28 @@
 const path = require('path');
 const { build } = require('vite');
+const vue = require('@vitejs/plugin-vue');
+const vueJsx = require('@vitejs/plugin-vue-jsx');
+const resolve = require('rollup-plugin-node-resolve');
+const postcss = require('rollup-plugin-postcss');
+const postcssImport = require('postcss-import');
 
 const entries = [
-  'container/index.tsx',
-  'data-table/index.tsx',
-  'data-view/index.tsx',
-  'enhance-alert/index.tsx',
-  'formatted/index.tsx',
-  'otp-input/index.tsx',
-  'otp-send/index.tsx',
-  'phone/index.tsx',
-  'scroll/index.tsx',
+  'container/index',
+  'data-table/index',
+  'data-view/index',
+  'enhance-alert/index',
+  'formatted/index',
+  'otp-input/index',
+  'otp-send/index',
+  'phone/index',
+  'scroll/index',
   'style/index.less',
-  'utils/index.ts',
+  'utils/index',
 ];
 
 (async () => {
   for (let entry of entries) {
-    const name = entry.slice(0, entry.indexOf('/'));
+    const name = entry.slice(0, entry.lastIndexOf('/'));
     build({
       root: path.resolve(__dirname, `../packages/${name}/`),
       build: {
@@ -35,6 +40,7 @@ const entries = [
           },
         },
       },
+      plugins: [vue(), vueJsx()],
     });
   }
 })();

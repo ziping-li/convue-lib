@@ -12,7 +12,7 @@ import './index.less';
 type EnhanceAlertPosition = 'bottom' | 'right';
 
 export default defineComponent({
-  name: 'enhance-alert',
+  name: 'EnhanceAlert',
   props: {
     position: {
       type: String as PropType<EnhanceAlertPosition>,
@@ -23,13 +23,13 @@ export default defineComponent({
     const appendAction = () => {
       const app = getCurrentInstance();
       if (slots.default) {
-        const action = app?.vnode?.el?.querySelector('.a-alert-actions');
+        const action = app?.vnode?.el?.querySelector('.convuea-alert-actions');
         if (action) {
           action.parentElement.removeChild(action);
         }
 
         const container = document.createElement('div');
-        container.className = `a-alert-actions`;
+        container.className = `convue-alert-actions`;
 
         const vnodes = slots.default?.();
         const vms = vnodes.map((vnode) => createVNode(vnode));
@@ -43,7 +43,7 @@ export default defineComponent({
         const description = app?.vnode?.el?.querySelector('.ant-alert-description');
         const wrapper = app?.attrs.description || app?.slots.description ? description : title;
         wrapper.appendChild(container);
-        wrapper.className += ` a-alert-${
+        wrapper.className += ` convue-alert-${
           !app?.attrs.description && !app?.slots.description ? 'right' : props.position
         }`;
       }

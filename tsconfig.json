@@ -14,8 +14,7 @@
     "declaration": true,
     "lib": ["dom", "es2018"],
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
-    "skipLibCheck": true,
-    "outDir": "./dist"
+    "skipLibCheck": true
   },
   "exclude": ["./node_modules", "./dist", "./examples"]
 }

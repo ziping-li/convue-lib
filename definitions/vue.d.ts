@@ -6,4 +6,8 @@ declare module '*.vue' {
 
 declare module 'cleave.js';
 
+declare module 'style-inject';
+
 declare module '*.json';
+
+declare module '*.less';
