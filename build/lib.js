@@ -2,9 +2,6 @@ const path = require('path');
 const { build } = require('vite');
 const vue = require('@vitejs/plugin-vue');
 const vueJsx = require('@vitejs/plugin-vue-jsx');
-const resolve = require('rollup-plugin-node-resolve');
-const postcss = require('rollup-plugin-postcss');
-const postcssImport = require('postcss-import');
 
 const entries = [
   'container/index',

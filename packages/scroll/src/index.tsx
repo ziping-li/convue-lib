@@ -30,6 +30,9 @@ export default defineComponent({
     barStyle: Object,
     thumbStyle: Object,
   },
+  emits: {
+    scroll: null,
+  },
   setup(props, { emit, slots }) {
     const wrapRef = ref();
     const state = reactive({
@@ -96,13 +99,14 @@ export default defineComponent({
         style={{ width: props.width, height: props.height }}
       >
         <div
-          class={{ 'convue-scrollbar-wrap': true, [`convue-scrollbar-wrap-${props.direction}`]: true }}
+          class={{
+            'convue-scrollbar-wrap': true,
+            [`convue-scrollbar-wrap-${props.direction}`]: true,
+          }}
           ref={wrapRef}
           onScroll={handleScroll}
         >
-          <div class="convue-scrollbar-content">
-            {slots.default?.()}
-          </div>
+          <div class="convue-scrollbar-content">{slots.default?.()}</div>
           {props.direction !== 'x' && (
             <Bar
               direction="vertical"
