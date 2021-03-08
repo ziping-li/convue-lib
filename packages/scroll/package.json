@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/scroll",
   "license": "MIT",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "main": "dist/scroll.umd.js",
   "files": [
     "dist"
@@ -17,7 +17,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@convue-lib/utils": "^0.1.12"
+    "@convue-lib/utils": "^0.1.13"
   },
   "gitHead": "d986ab8288b47078425ce59ee5458c887e15b687"
 }
