@@ -18,6 +18,10 @@ export default defineComponent({
       }),
     },
   },
+  emits: {
+    'update:modelValue': null,
+    change: null,
+  },
   setup(props, { attrs, emit }) {
     let cleave: any = null;
     const state = reactive({

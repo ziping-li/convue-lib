@@ -1,4 +1,4 @@
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, reactive, watch } from 'vue';
 import { getSupportedCallingCodes, getPhoneNumber } from '@convue-lib/utils';
 import styleInject from 'style-inject';
 import css from './index.less';
@@ -23,6 +23,10 @@ export default defineComponent({
       default: '+86',
     },
   },
+  emits: {
+    'update:modelValue': null,
+    change: null,
+  },
   setup(props, { attrs, emit }) {
     const codes = getSupportedCallingCodes();
     const getCurrentNumber = () => {
@@ -38,14 +42,22 @@ export default defineComponent({
 
     const state = reactive(getCurrentNumber());
 
+    watch(state.phone, () => {
+      const currentValue = state.code + props.separator + state.phone;
+      emit('update:modelValue', currentValue);
+      emit('change', currentValue);
+    });
+
     const onChange = () => {
       const currentValue = state.code + props.separator + state.phone;
       emit('update:modelValue', currentValue);
       emit('change', currentValue);
     };
 
-    const { onInput, ...restAttrs } = attrs;
+    const { onInput, value, ...restAttrs } = attrs;
+    delete restAttrs['onUpdate:value'];
     const bindValues = { ...restAttrs, onChange };
+
     return () => (
       <a-input
         {...bindValues}
