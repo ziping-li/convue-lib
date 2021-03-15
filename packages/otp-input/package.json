@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/otp-input",
   "license": "MIT",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "main": "dist/otp-input.umd.js",
   "files": [
     "dist"
