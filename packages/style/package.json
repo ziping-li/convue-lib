@@ -1,7 +1,7 @@
 {
   "name": "@convue-lib/styles",
   "license": "MIT",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "main": "dist/style.css",
   "publishConfig": {
     "access": "public"
