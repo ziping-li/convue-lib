@@ -42,17 +42,15 @@ export default defineComponent({
 
     const state = reactive(getCurrentNumber());
 
-    watch(state.phone, () => {
-      const currentValue = state.code + props.separator + state.phone;
-      emit('update:modelValue', currentValue);
-      emit('change', currentValue);
-    });
-
     const onChange = () => {
       const currentValue = state.code + props.separator + state.phone;
       emit('update:modelValue', currentValue);
       emit('change', currentValue);
     };
+
+    watch(state, () => {
+      onChange();
+    });
 
     const { onInput, value, ...restAttrs } = attrs;
     delete restAttrs['onUpdate:value'];
@@ -67,11 +65,7 @@ export default defineComponent({
           addonBefore: () => {
             return (
               props.showCode && (
-                <a-select
-                  v-model={[state.code, 'value']}
-                  style={{ width: '70px' }}
-                  onChange={onChange}
-                >
+                <a-select v-model={[state.code, 'value']} style={{ width: '70px' }}>
                   {codes.map((item) => {
                     return (
                       <a-select-option key={item} value={item}>
